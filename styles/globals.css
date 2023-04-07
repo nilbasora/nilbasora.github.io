@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .left-link,
+  .right-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .header-image img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+  }
+  
+  
+  
