@@ -4,14 +4,14 @@ import { PostMetadata } from "../components/PostMetadata";
 
 const getPostMetadata = (subfolder: string): PostMetadata[] => {
   const path = require("path");
-  const folder = path.join(process.cwd(), `posts/${subfolder}/`);
+  const folder = path.join(process.cwd(), `app/posts/${subfolder}/`);
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
   // Get gray-matter data from each file.
   const posts = markdownPosts.map((fileName) => {
     const path = require("path");
-    const file = path.join(process.cwd(), `posts/${subfolder}/${fileName}`);
+    const file = path.join(process.cwd(), `app/posts/${subfolder}/${fileName}`);
     const fileContents = fs.readFileSync(file, "utf8");
     const matterResult = matter(fileContents);
     return {
